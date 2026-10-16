@@ -1,0 +1,97 @@
+/* Bronois — amber accent on top of the active Obsidian theme */
+.bronois-view {
+  --bronois-accent: #d97706;
+  --bronois-accent-strong: #b45309;
+  --bronois-soft: rgba(217, 119, 6, 0.75);
+  padding: var(--size-4-4);
+}
+
+.bronois-card {
+  max-width: 26rem;
+  margin: 0 auto;
+  padding: var(--size-4-6) var(--size-4-5);
+  border-radius: 1.25rem;
+  background: var(--background-secondary);
+  border: 1px solid var(--background-modifier-border);
+}
+
+.bronois-title {
+  text-align: center;
+  margin: 0 0 0.25rem;
+  font-size: 1.8em;
+}
+
+.bronois-subtitle {
+  text-align: center;
+  margin: 0 0 1.5rem;
+  color: var(--bronois-soft);
+  font-size: var(--font-ui-small);
+}
+
+.bronois-play {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 7rem;
+  height: 7rem;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background: var(--bronois-accent-strong);
+  color: #fff;
+  box-shadow: 0 16px 24px -8px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s, background 0.2s;
+}
+.bronois-play:hover { transform: scale(1.05); background: var(--bronois-accent); }
+.bronois-play:active { transform: scale(0.96); }
+.bronois-play svg { width: 2.75rem; height: 2.75rem; fill: currentColor; }
+.bronois-play.is-playing { animation: bronois-breathe 4s ease-in-out infinite; }
+
+@keyframes bronois-breathe {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(217, 119, 6, 0.35); }
+  50% { box-shadow: 0 0 0 14px rgba(217, 119, 6, 0); }
+}
+
+.bronois-countdown { text-align: center; margin-bottom: 1.25rem; }
+.bronois-countdown-time { font-size: 1.5em; font-weight: 700; color: var(--bronois-accent); font-variant-numeric: tabular-nums; }
+.bronois-countdown-label { font-size: var(--font-ui-smaller); color: var(--text-muted); }
+
+.bronois-group { margin-bottom: 1.25rem; }
+.bronois-head { display: flex; justify-content: space-between; margin-bottom: 0.4rem; font-size: var(--font-ui-small); }
+.bronois-label { font-weight: 600; color: var(--bronois-soft); font-size: var(--font-ui-small); }
+.bronois-value { color: var(--text-muted); font-variant-numeric: tabular-nums; }
+
+.bronois-slider {
+  --bronois-fill: 50%;
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 6px;
+  background: linear-gradient(to right,
+    var(--bronois-accent) 0%, var(--bronois-accent) var(--bronois-fill),
+    var(--background-modifier-border) var(--bronois-fill), var(--background-modifier-border) 100%);
+}
+.bronois-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px; height: 16px; border-radius: 50%;
+  background: #fbbf24; border: none; cursor: pointer;
+}
+
+.bronois-timer-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.4rem; margin-top: 0.5rem; }
+.bronois-timer-btn { font-size: var(--font-ui-smaller); padding: 0.5rem 0; }
+.bronois-view .bronois-timer-btn.bronois-timer-btn.is-active { background: var(--bronois-accent-strong); color: #fff; }
+
+.bronois-hint, .bronois-footer {
+  font-size: var(--font-ui-smaller);
+  color: var(--text-faint);
+  margin: 0.5rem 0 0;
+}
+.bronois-footer { text-align: center; margin-top: 1.25rem; }
+
+/* Status bar */
+.bronois-status { display: inline-flex; align-items: center; gap: 4px; }
+.bronois-status-icon { display: inline-flex; }
+.bronois-status-icon svg { width: 14px; height: 14px; }
+.bronois-status.is-playing { color: var(--bronois-accent, #d97706); }

@@ -1,0 +1,11 @@
+{
+  "id": "bronois",
+  "name": "Bronois",
+  "version": "1.0.0",
+  "minAppVersion": "1.4.0",
+  "description": "Deep, soothing stereo brown noise for focus and sleep, with a sleep timer, low-pass filter and bass boost.",
+  "author": "AshOtis",
+  "authorUrl": "https://github.com/AshOtis",
+  "fundingUrl": "https://buymeacoffee.com/ashotis",
+  "isDesktopOnly": false
+}
