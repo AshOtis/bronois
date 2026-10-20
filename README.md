@@ -29,4 +29,4 @@ Made by [AshOtis](https://github.com/AshOtis). If you like it, you can [buy me a
 
 ## Licence
 
-MIT
+[PolyForm Noncommercial 1.0.0](LICENSE) © AshOtis: free for personal and other noncommercial use; selling it or using it commercially needs my permission. Versions before this change were released under MIT.
